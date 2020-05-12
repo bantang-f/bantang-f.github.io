@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ch-zh">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="文老师">
+
+
+
+
+
+<title>文老师带你建个人网站 | 文科班的编程课堂</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">文科班的编程课堂</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">类别</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/">关于</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">文科班的编程课堂</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; 目录</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">文章</a>
+                
+                    <a class="menu-item" href="/category">类别</a>
+                
+                    <a class="menu-item" href="/tag">标签</a>
+                
+                    <a class="menu-item" href="/">关于</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">展开目录</a>
+        <a onclick="go_top()">回到顶部</a>
+        <a onclick="go_bottom()">回到底部</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "隐藏目录"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "展开目录"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">文老师带你建个人网站</h1>
+            
+                <div class="post-meta">
+                    
+                        作者: <a itemprop="author" rel="author" href="/">文老师</a>
+                    
+
+                    
+                        <span class="post-time">
+                        发表时间 <a href="#">May 12, 2020</a>
+                        </span>
+                        
+                            <span class="post-time">
+                            最后修改时间: <a href="#">May 12, 2020</a>
+                            </span>
+                        
+                    
+                </div>
+                <div class="post-meta">
+                    
+                    
+                        <span class="post-category">
+                    类别:
+                            
+                                <a href="/category/%E6%96%87%E8%80%81%E5%B8%88%E7%9A%84%E7%BC%96%E7%A8%8B%E8%AF%BE%E5%A0%82/">文老师的编程课堂</a>
+                            
+                        </span>
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="文老师带你像程序员一样发布个人网站"><a href="#文老师带你像程序员一样发布个人网站" class="headerlink" title="文老师带你像程序员一样发布个人网站"></a>文老师带你像程序员一样发布个人网站</h1><blockquote>
+<p>大家好，我是文科班的编程老师。<br>对，文科生都开始学编程了，你还有什么理由不学习。</p>
+</blockquote>
+<h1 id="实际问题"><a href="#实际问题" class="headerlink" title="实际问题"></a>实际问题</h1><p>昨天，文科班的班长想建立一个班级网站来分享学习笔记。<br>作为文科班的编程老师，今天我来带大家快速且免费地搭建一个人人可以访问到的网站。</p>
+<h1 id="从下载安装开始"><a href="#从下载安装开始" class="headerlink" title="从下载安装开始"></a>从下载安装开始</h1><p>文科班的教程当然要像<em>宜家</em>的说明书一样，简单易懂。<br><img src="hexo.png" alt="软件列表"><br>如图进入<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo官网</a>，按照教程下载我们所需要的3个软件：</p>
+<ul>
+<li>Git</li>
+<li>Node.js</li>
+<li>Hexo</li>
+</ul>
+<p>文老师假设大家使用Windows 10，安装NodeJs时需要选择64-bit的版本安装。</p>
+<h1 id="假装高级程序员，使用github"><a href="#假装高级程序员，使用github" class="headerlink" title="假装高级程序员，使用github"></a>假装高级程序员，使用github</h1><p>虽然我们是文科生，我们也要专业地编程。<img src="github.png" alt="github"></p>
+<p>我们将使用免费的服务器来托管我们的网站。如图所示我们需要在程序员聚集地<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>上注册一个账户。</p>
+<p><img src="create-repo-btn.png" alt="新建按钮"></p>
+<p>然后登陆，如图点击新建按钮进入项目页面。</p>
+<p><img src="create-repo-page.png" alt="新建页面"></p>
+<p>如图所示，使用username.github.io作为项目名称。但需要把username替换成注册时的用户名称。</p>
+<h1 id="文科生善于利用工具"><a href="#文科生善于利用工具" class="headerlink" title="文科生善于利用工具"></a>文科生善于利用工具</h1><p>作为文科生一定要善于利用呆萌理科生的一些工具。我们将要使用Hexo来生成网站框架。</p>
+<p>大家进入任意一个个人的文件夹，按着Shift键并点击鼠标右键，从菜单中选择＂在此处打开命令行窗口＂。在命令行窗口中输入<code>hexo init website &amp;&amp; cd website &amp;&amp; hexo server</code>。耐心等待一会儿，当终端窗口不再更新后，网站就成功地在本地运行了。此时可以在浏览地址栏中输入localhost:4000来<a href="http://localhost:4000" target="_blank" rel="noopener">预览网站</a>。</p>
+<h1 id="妈妈再也不用担心我的排版了"><a href="#妈妈再也不用担心我的排版了" class="headerlink" title="妈妈再也不用担心我的排版了"></a>妈妈再也不用担心我的排版了</h1><p>Hexo工具默认使用markdown来编写新页面。markdown是一种简单的标记语言，让我们可以专注内容创作而忽略排版问题。只需要花5分钟就可以入门，一个简单的教程<a href="https://www.jianshu.com/p/q81RER/" target="_blank" rel="noopener">传送门</a>。</p>
+<p>此时大家可以修改<em>website/source/_posts/hello-word.md</em>文件，来创作我们的第一个页面。完成编辑之后刷新页面，就可以看到成果了。</p>
+<p>大家也可以在<em>website</em>文件夹下打开新的命令行并输入<code>hexo new post post_name</code>来新建一个页面。<em>post_name</em>即新文件的名称可以是任何语言的文本，但是建议使用英文命名来避免编码问题。</p>
+<h1 id="我们要发布网站啦"><a href="#我们要发布网站啦" class="headerlink" title="我们要发布网站啦"></a>我们要发布网站啦</h1><p>大家打开<em>website/_config.yml*文件，修改</em>#Site*部分填入网站的信息。并且把最后一部分修改为如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>别忘记了替换掉username。然后在<em>website</em>文件夹下打开命令行，并输入<code>hexo generate --deploy</code>。这样我们的网站就发布啦，地址就是username.github.io。大家可以请亲朋好友来围观，点赞投币收藏一键三连！</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                
+                
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>标签:</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">后退</a>
+                <span>· </span>
+                <a href="/">主页</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/00%E6%96%87%E8%80%81%E5%B8%88%E5%B8%A6%E4%BD%A0python%E5%85%A5%E9%97%A8/">00文老师带你python入门</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© 文老师 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
